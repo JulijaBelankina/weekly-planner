@@ -1,5 +1,5 @@
-# Weekly Planner Stage 4
+# Weekly Planner Stage 5
 
-Modular static site for GitHub Pages. Stage 4 adds the Weekly Schedule.
+Adds manual JSON Backup and Restore Backup controls next to Today.
 
-Existing localStorage key is retained for migration from earlier stages.
+Backup files contain all planner data and use backup format version 1. Restore validates the file and requires confirmation before replacing local browser data.
