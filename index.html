@@ -1,10 +1,64 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Weekly Planner</title><link rel="stylesheet" href="css/style.css"></head><body>
-<div class="app"><header><h1>Weekly Planner</h1><div class="week-nav"><button class="nav" id="prev">‹</button><div class="week-label" id="weekLabel"></div><button class="nav" id="next">›</button></div><button class="today" id="today">Today</button></header>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weekly Planner</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<header>
+  <h1>Weekly Planner</h1>
+  <div class="week-nav"><button class="nav" id="prev">‹</button><div class="week-label" id="weekLabel"></div><button class="nav" id="next">›</button></div>
+  <button class="today" id="today">Today</button>
+</header>
+
 <div class="top">
-<section class="card priorities"><div class="card-head"><div><h2>Top Priorities</h2><div class="sub" id="prioritySub">Choose up to 4 main priorities for this week.</div></div><div class="count" id="count"></div></div><div class="priority-list" id="priorityList"></div><button class="add" id="addPriorityBtn">＋ Add priority</button><div class="max">Maximum 4 priorities per week.</div></section>
-<section class="card next"><div class="card-head"><div><h2>Next Week</h2><div class="sub" id="nextWeekSub">Add items for next week instead of squeezing them into this week.</div></div></div><div class="next-week-list" id="nextWeekList"></div><button class="add" id="addNextWeekBtn">＋ Add item</button></section>
+<section class="card priorities">
+ <div class="card-head"><div><h2>Top Priorities</h2><div class="sub" id="prioritySub">Choose up to 4 main priorities for this week.</div></div><div class="count" id="count"></div></div>
+ <div class="priority-list" id="priorityList"></div>
+ <button class="add" id="addPriorityBtn">＋ Add priority</button>
+ <div class="max">Maximum 4 priorities per week.</div>
+</section>
+
+<section class="card next">
+ <div class="card-head"><div><h2>Next Week</h2><div class="sub" id="nextSub">Add items for next week instead of squeezing them into this week.</div></div></div>
+ <div class="scroll-list" id="nextList"></div>
+ <button class="add" id="addNextBtn">＋ Add item</button>
+</section>
 </div>
-<section class="card schedule"><div class="card-head"><div><h2>Weekly Schedule</h2><div class="sub">Plan your week with meetings and focus time.</div></div></div><div class="placeholder">Weekly schedule view<br>to be added in next stage</div></section>
-<section class="card goals"><div class="card-head"><div><h2>Weekly Goals</h2><div class="sub">What do you want to achieve this week?</div></div></div><div class="placeholder">Weekly goals section<br>to be added in next stage</div></section></div>
-<div class="modal-bg" id="modalBg"><div class="modal"><h3 id="modalTitle"></h3><label id="modalLabel" for="modalInput"></label><input id="modalInput"><div class="error" id="error"></div><div class="actions"><button class="btn" id="cancel">Cancel</button><button class="btn primary" id="save"></button></div></div></div>
-<script src="js/storage.js"></script><script src="js/weeks.js"></script><script src="js/priorities.js"></script><script src="js/next-week.js"></script><script src="js/app.js"></script></body></html>
+
+<section class="card schedule">
+ <div class="card-head"><div><h2>Weekly Schedule</h2><div class="sub">Plan your week with meetings and focus time.</div></div></div>
+ <div class="placeholder">Weekly schedule view<br>to be added in next stage</div>
+</section>
+
+<section class="card goals">
+ <div class="card-head"><div><h2>Weekly Goals</h2><div class="sub" id="goalsSub">What do you want to achieve this week?</div></div></div>
+ <div class="scroll-list goal-list" id="goalList"></div>
+ <button class="add" id="addGoalBtn">＋ Add goal</button>
+</section>
+</div>
+
+<div class="modal-bg" id="priorityModal">
+ <div class="modal"><h3 id="priorityModalTitle">Add priority</h3><label for="categoryInput">Category name</label><input id="categoryInput" placeholder="e.g. HMI, Team, Pipeline"><div class="error" id="priorityError"></div><div class="actions"><button class="btn" id="priorityCancel">Cancel</button><button class="btn primary" id="prioritySave">Add priority</button></div></div>
+</div>
+
+<div class="modal-bg" id="nextModal">
+ <div class="modal"><h3 id="nextModalTitle">Add to Next Week</h3><label for="nextInput">Next Week item</label><input id="nextInput" placeholder="e.g. Review test strategy"><div class="error" id="nextError"></div><div class="actions"><button class="btn" id="nextCancel">Cancel</button><button class="btn primary" id="nextSave">Add item</button></div></div>
+</div>
+
+<div class="modal-bg" id="goalModal">
+ <div class="modal"><h3 id="goalModalTitle">Add goal</h3>
+  <label for="goalInput">Goal</label><input id="goalInput" placeholder="e.g. Complete HMI disconnection testing">
+  <label class="second-label" for="goalPriority">Linked priority (optional)</label>
+  <select id="goalPriority"></select>
+  <div class="error" id="goalError"></div>
+  <div class="actions"><button class="btn" id="goalCancel">Cancel</button><button class="btn primary" id="goalSave">Add goal</button></div>
+ </div>
+</div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

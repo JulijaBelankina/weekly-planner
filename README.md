@@ -1,15 +1,35 @@
 # Weekly Planner
 
-Stage 2 of the Weekly Planner web page.
+Stage 3 modular Weekly Planner for GitHub Pages.
 
-## Structure
+## Features
 
-* `index.html` contains the page structure.
-* `css/style.css` contains the visual styling.
-* `js/storage.js` handles saved browser data and migrates Stage 1 data.
-* `js/weeks.js` handles week navigation and locking.
-* `js/priorities.js` contains Top Priorities behaviour.
-* `js/next-week.js` contains Next Week behaviour.
-* `js/app.js` connects the features and shared popup.
+Top Priorities
 
-Open `index.html` to run locally, or publish the repository using GitHub Pages.
+Next Week
+
+Weekly Goals with status and optional priority linking
+
+Historical weeks lock at Monday 00:00
+
+Weekly Schedule remains reserved for a later stage
+
+## Files
+
+index.html
+
+css/style.css
+
+js/app.js
+
+js/storage.js
+
+js/weeks.js
+
+js/priorities.js
+
+js/next-week.js
+
+js/goals.js
+
+The existing localStorage key `weeklyPlannerStage1` is retained so existing saved planner data can be migrated and reused.
