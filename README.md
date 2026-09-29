@@ -1,35 +1,5 @@
-# Weekly Planner
+# Weekly Planner Stage 4
 
-Stage 3 modular Weekly Planner for GitHub Pages.
+Modular static site for GitHub Pages. Stage 4 adds the Weekly Schedule.
 
-## Features
-
-Top Priorities
-
-Next Week
-
-Weekly Goals with status and optional priority linking
-
-Historical weeks lock at Monday 00:00
-
-Weekly Schedule remains reserved for a later stage
-
-## Files
-
-index.html
-
-css/style.css
-
-js/app.js
-
-js/storage.js
-
-js/weeks.js
-
-js/priorities.js
-
-js/next-week.js
-
-js/goals.js
-
-The existing localStorage key `weeklyPlannerStage1` is retained so existing saved planner data can be migrated and reused.
+Existing localStorage key is retained for migration from earlier stages.
